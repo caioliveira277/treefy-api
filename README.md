@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Treefy - API 🌱
+## The plant app ***Fatec - SR TCC***
 
-## Getting Started
+<br>
+<p float="left">
+ <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+ <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
+ <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+ <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+</p>
+<br>
 
-First, run the development server:
+## Idea: 💡
+Develop an app to help grow plants
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Functionalities:
+-
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the project: 🚀
+To run and preview the project you will need to follow the next steps.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Prerequisites:
+Below are the necessary tools for the project to work.
+- **NodeJS versão 16** <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/nodejs.svg" height="20" /><br>
+  [<ins>Instalation guide NodeJS</ins>](https://nodejs.org/en/).
+  
+### Installing dependencies:
+Run command to install project dependencies.
+   ```sh
+   npm install
+   ```  
+  
+### Executing the project:
+The scripts below run the project.
+  ```sh
+   npm run dev # execute in developer mode
+   npm run build # to build project
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Code validation:
+The scripts below run prettier and lint.
+  ```sh
+   npm run lint # run lint validation
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Tests:
+The scripts below run jest tests.
+  ```sh
+  Not implemented yet
+   ```
+   
+   <br>
 
-## Learn More
+---
+## Links: 🌐
+***Link to NextJS:***<br>
+[<ins>NexttJS</ins>](https://nextjs.org/)
 
-To learn more about Next.js, take a look at the following resources:
+[<ins>Vercel</ins>](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+## License
+This project is licensed under the [APACHE 2.0] license - see the LICENSE file for details
