@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_banner_galleries",
+    "info": {
+        "displayName": "gallery",
+        "icon": "photo-video",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "pictures": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    }
+}
