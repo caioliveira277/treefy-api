@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_content_text_blocks",
+    "info": {
+        "displayName": "text-block",
+        "icon": "text-height"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "richtext"
+        }
+    }
+}
