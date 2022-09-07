@@ -56,10 +56,9 @@ The scripts below run jest tests.
 
 ---
 ## Links: 🌐
-***Link to NextJS:***<br>
-[<ins>NexttJS</ins>](https://nextjs.org/)
-
-[<ins>Vercel</ins>](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+[<ins>NexttJS</ins>](https://nextjs.org/)<br>
+[<ins>Vercel</ins>](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)<br>
+[<ins>Strapi CMS docs</ins>](https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html)
 
 ---
 ## License
