@@ -4,6 +4,7 @@
 <br>
 <p float="left">
  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+ <img src="https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white">
  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
@@ -14,7 +15,9 @@
 Develop an app to help grow plants
 
 ## Functionalities:
--
+- Register informative content
+- Manage user moderator permissions
+- Provide an api for viewing content and categories
 
 ## Running the project: 🚀
 To run and preview the project you will need to follow the next steps.
