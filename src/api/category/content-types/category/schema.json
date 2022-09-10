@@ -21,6 +21,14 @@
       "relation": "manyToMany",
       "target": "api::article.article",
       "inversedBy": "categories"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
