@@ -29,7 +29,9 @@
             "type": "media",
             "multiple": false,
             "required": true,
-            "allowedTypes": ["images"]
+            "allowedTypes": [
+                "images"
+            ]
         },
         "categories": {
             "type": "relation",
@@ -38,7 +40,9 @@
             "mappedBy": "articles"
         },
         "thumbnail": {
-            "allowedTypes": ["images"],
+            "allowedTypes": [
+                "images"
+            ],
             "type": "media",
             "multiple": false,
             "required": true
