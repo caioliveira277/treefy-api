@@ -22,7 +22,9 @@ const handleFormatArticle = async (articles, ctx) => {
             article: {
                 fields: ["id"],
                 where: {
-                    $in: articles.map((article) => article.id),
+                    id: {
+                        $in: articles.map((article) => article.id),
+                    },
                 },
             },
         },

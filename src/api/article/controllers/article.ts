@@ -27,7 +27,9 @@ const handleFormatArticle = async (articles: any, ctx: any) => {
         article: {
           fields: ["id"],
           where: {
-            $in: articles.map((article) => article.id),
+            id: {
+              $in: articles.map((article) => article.id),
+            },
           },
         },
       },
@@ -37,6 +39,7 @@ const handleFormatArticle = async (articles: any, ctx: any) => {
   formatedArticles = formatedArticles.map((article) => {
     let totalRatings = null;
     let quantity = 0;
+
     feedbacks.forEach((feedback) => {
       if (feedback.article.id === article.id) {
         totalRatings += feedback.ratingPoints;

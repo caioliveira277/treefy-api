@@ -9,6 +9,9 @@ export default factories.createCoreRouter("api::feedback.feedback", {
     create: {
       middlewares: ["global::jwt-cognito"],
     },
+    find: {
+      middlewares: ["global::jwt-cognito"],
+    },
   },
-  only: ["create"],
+  only: ["create", "find"],
 });
