@@ -47,7 +47,8 @@ const handleFormatArticle = async (articles: any, ctx: any) => {
     return {
       ...article,
       feedbacks: {
-        averageRatings: totalRatings === null ? null : totalRatings / quantity,
+        averageRatings:
+          totalRatings === null ? null : (totalRatings / quantity).toFixed(1),
       },
     };
   });
