@@ -13,7 +13,6 @@ export default (_config, { strapi }: { strapi: Strapi }) => {
   });
 
   return async (ctx, next) => {
-    strapi.log.info("In jwt-cognito middleware.");
     try {
       const cognitoAccessToken = ctx.request.header.authorization;
       const payload = await verifier.verify(cognitoAccessToken);

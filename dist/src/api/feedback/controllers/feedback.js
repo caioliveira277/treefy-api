@@ -21,12 +21,10 @@ exports.default = strapi_1.factories.createCoreController("api::feedback.feedbac
     async find(ctx) {
         try {
             const userId = ctx.response.get("authenticateduserid");
-            if (ctx.request.query.filters) {
-                ctx.request.query.filters.userId = { $eq: userId };
-            }
-            else {
-                ctx.request.query.filters = { userId: { $eq: userId } };
-            }
+            const articleId = ctx.request.query.filters.article;
+            ctx.request.query.filters = {
+                $and: [{ userId }, { article: articleId }],
+            };
             const { data: feedback, meta } = await super.find(ctx);
             return { data: feedback, meta };
         }
