@@ -22,6 +22,11 @@
             "type": "relation",
             "relation": "oneToOne",
             "target": "api::article.article"
+        },
+        "userId": {
+            "type": "string",
+            "required": true,
+            "private": true
         }
     }
 }
