@@ -21,16 +21,19 @@ export default factories.createCoreController("api::feedback.feedback", () => ({
   async find(ctx) {
     try {
       const userId = ctx.response.get("authenticateduserid");
-      const articleId = ctx.request.query.filters.article;
+      const articleId = ctx.request.query.filters?.article;
 
       ctx.request.query.filters = {
-        $and: [{ userId }, { article: articleId }],
+        $and: [{ userId }],
       };
+
+      if (articleId) {
+        ctx.request.query.filters.$and.push({ article: articleId });
+      }
 
       const { data: feedback, meta } = await super.find(ctx);
       return { data: feedback, meta };
     } catch (error) {
-      console.log(error);
       return ctx.badRequest("Bad request");
     }
   },

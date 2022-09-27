@@ -22,7 +22,8 @@ export default (_config, { strapi }: { strapi: Strapi }) => {
       });
 
       await next();
-    } catch {
+    } catch (e) {
+      console.log(e);
       return ctx.unauthorized("Invalid access token");
     }
   };

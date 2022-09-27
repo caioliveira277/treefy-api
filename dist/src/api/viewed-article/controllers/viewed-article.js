@@ -21,9 +21,8 @@ exports.default = strapi_1.factories.createCoreController("api::viewed-article.v
     async find(ctx) {
         try {
             const userId = ctx.response.get("authenticateduserid");
-            const articleId = ctx.request.query.filters.article;
             ctx.request.query.filters = {
-                $and: [{ userId }, { article: articleId }],
+                userId: { $eq: userId },
             };
             const { data: feedback, meta } = await super.find(ctx);
             return { data: feedback, meta };
