@@ -10,9 +10,37 @@ export default factories.createCoreController(
     async create(ctx) {
       try {
         const userId = ctx.response.get("authenticateduserid");
+        const articleId = ctx.request.body.data?.article;
         ctx.request.body.data.userId = userId;
 
-        if (!ctx.request.body.data.article) throw new Error();
+        if (!articleId) throw new Error();
+
+        const viewed = await strapi.entityService.findMany(
+          "api::viewed-article.viewed-article",
+          {
+            fields: ["id"],
+            filters: {
+              $and: [
+                {
+                  userId,
+                },
+                {
+                  article: articleId,
+                },
+              ],
+            },
+            limit: 1,
+          }
+        );
+
+        if (viewed.length > 0) {
+          return ctx.send(
+            {
+              message: "not modified",
+            },
+            200
+          );
+        }
 
         const { data: viewedArticles, meta } = await super.create(ctx);
         return { data: viewedArticles, meta };
