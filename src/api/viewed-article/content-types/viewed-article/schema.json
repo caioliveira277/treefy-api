@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "viewed_articles",
+  "info": {
+    "singularName": "viewed-article",
+    "pluralName": "viewed-articles",
+    "displayName": "viewed-article"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "private": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true,
+      "private": true
+    }
+  }
+}
