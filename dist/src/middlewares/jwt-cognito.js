@@ -19,7 +19,8 @@ exports.default = (_config, { strapi }) => {
             });
             await next();
         }
-        catch {
+        catch (e) {
+            console.log(e);
             return ctx.unauthorized("Invalid access token");
         }
     };

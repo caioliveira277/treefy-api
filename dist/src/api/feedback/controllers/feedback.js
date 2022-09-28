@@ -19,17 +19,20 @@ exports.default = strapi_1.factories.createCoreController("api::feedback.feedbac
         }
     },
     async find(ctx) {
+        var _a;
         try {
             const userId = ctx.response.get("authenticateduserid");
-            const articleId = ctx.request.query.filters.article;
+            const articleId = (_a = ctx.request.query.filters) === null || _a === void 0 ? void 0 : _a.article;
             ctx.request.query.filters = {
-                $and: [{ userId }, { article: articleId }],
+                $and: [{ userId }],
             };
+            if (articleId) {
+                ctx.request.query.filters.$and.push({ article: articleId });
+            }
             const { data: feedback, meta } = await super.find(ctx);
             return { data: feedback, meta };
         }
         catch (error) {
-            console.log(error);
             return ctx.badRequest("Bad request");
         }
     },
