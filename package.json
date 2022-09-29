@@ -11,12 +11,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.3.6",
-    "@strapi/plugin-users-permissions": "4.3.6",
-    "@strapi/strapi": "4.3.6",
+    "@strapi/plugin-i18n": "4.3.9",
+    "@strapi/plugin-users-permissions": "4.3.9",
+    "@strapi/strapi": "4.3.9",
     "aws-jwt-verify": "^3.1.0",
     "better-sqlite3": "7.4.6",
     "next": "12.2.2",
+    "pg": "^8.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "strapi-plugin-react-editorjs": "^2.0.2"
