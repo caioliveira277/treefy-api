@@ -3,7 +3,7 @@
 
 <br>
 <p float="left">
- <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+ <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
  <img src="https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white">
  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
@@ -56,7 +56,7 @@ The scripts below run jest tests.
 
 ---
 ## Links: 🌐
-[<ins>NexttJS</ins>](https://nextjs.org/)<br>
+[<ins>Heroku</ins>](https://www.heroku.com/)<br>
 [<ins>Treefy - API</ins>](https://treefy-api.herokuapp.com/api)<br>
 [<ins>Strapi CMS docs</ins>](https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html)
 
