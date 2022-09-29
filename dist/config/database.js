@@ -10,7 +10,10 @@ exports.default = ({ env }) => ({
             user: env("DATABASE_USER"),
             password: env("DATABASE_PASSWORD"),
             timezone: env("DATABASE_TIMEZONE"),
-            ssl: env("DATABASE_SSL", false),
+            ssl: env.json("DATABASE_SSL", { rejectUnauthorized: false }),
+        },
+        options: {
+            ssl: false,
         },
     },
 });
