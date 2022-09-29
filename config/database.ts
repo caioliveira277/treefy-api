@@ -1,17 +1,22 @@
-export default ({ env }) => ({
-  connection: {
-    client: "postgres",
+import { parse } from "pg-connection-string";
+
+export default ({ env }) => {
+  const config = parse(env("DATABASE_URL"));
+  return {
     connection: {
-      host: env("DATABASE_HOST"),
-      port: env.int("DATABASE_PORT"),
-      database: env("DATABASE_NAME"),
-      user: env("DATABASE_USER"),
-      password: env("DATABASE_PASSWORD"),
-      timezone: env("DATABASE_TIMEZONE"),
-      ssl: { rejectUnauthorized: false },
+      client: "postgres",
+      connection: {
+        host: env("DATABASE_HOST", config.host),
+        port: env.int("DATABASE_PORT", config.port),
+        database: env("DATABASE_NAME", config.database),
+        user: env("DATABASE_USER", config.user),
+        password: env("DATABASE_PASSWORD", config.password),
+        timezone: env("DATABASE_TIMEZONE"),
+        ssl: env.json("DATABASE_SSL", { rejectUnauthorized: false }),
+      },
+      options: {
+        ssl: false,
+      },
     },
-    options: {
-      ssl: false,
-    },
-  },
-});
+  };
+};
