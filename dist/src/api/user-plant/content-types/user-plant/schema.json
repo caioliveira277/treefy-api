@@ -1,0 +1,62 @@
+{
+    "kind": "collectionType",
+    "collectionName": "user_plants",
+    "info": {
+        "singularName": "user-plant",
+        "pluralName": "user-plants",
+        "displayName": "user-plant",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "annotation": {
+            "type": "text"
+        },
+        "userId": {
+            "type": "string",
+            "required": true
+        },
+        "species": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::specie.specie"
+        },
+        "waterTimes": {
+            "type": "integer",
+            "min": 1
+        },
+        "waterRange": {
+            "type": "enumeration",
+            "enum": [
+                "minutes",
+                "hours",
+                "days",
+                "weeks",
+                "months",
+                "years"
+            ]
+        },
+        "sunTimes": {
+            "type": "integer",
+            "min": 1
+        },
+        "sunRange": {
+            "type": "enumeration",
+            "enum": [
+                "minutes",
+                "hours",
+                "days",
+                "weeks",
+                "months",
+                "years"
+            ]
+        }
+    }
+}

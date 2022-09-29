@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "species",
+  "info": {
+    "singularName": "specie",
+    "pluralName": "species",
+    "displayName": "specie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "waterTimes": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    },
+    "waterRange": {
+      "type": "enumeration",
+      "enum": [
+        "minutes",
+        "hours",
+        "days",
+        "weeks",
+        "months",
+        "years"
+      ]
+    },
+    "sunTimes": {
+      "type": "integer",
+      "min": 1
+    },
+    "sunRange": {
+      "type": "enumeration",
+      "enum": [
+        "minutes",
+        "hours",
+        "days",
+        "weeks",
+        "months",
+        "years"
+      ]
+    }
+  }
+}
