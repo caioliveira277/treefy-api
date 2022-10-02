@@ -15,6 +15,9 @@ exports.default = strapi_1.factories.createCoreRouter("api::user-plant.user-plan
         update: {
             middlewares: ["global::jwt-cognito"],
         },
+        delete: {
+            middlewares: ["global::jwt-cognito"],
+        },
     },
-    only: ["create", "find", "update"],
+    only: ["create", "find", "update", "delete"],
 });

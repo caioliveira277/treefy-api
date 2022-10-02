@@ -21,10 +21,26 @@ exports.default = strapi_1.factories.createCoreController("api::user-plant.user-
             .update({
             where: {
                 id: userPlantId,
+                userId: userId,
             },
             data: ctx.request.body.data,
         });
         return { data: { id: userPlantId, attributes: userPlants }, meta: {} };
+    },
+    async delete(ctx) {
+        const userId = ctx.response.get("authenticateduserid");
+        const userPlantId = ctx.request.params.id;
+        if (!userPlantId)
+            throw new Error();
+        const userPlant = await strapi.db
+            .query("api::user-plant.user-plant")
+            .delete({
+            where: {
+                id: userPlantId,
+                userId: userId,
+            },
+        });
+        return { data: { id: userPlantId, attributes: userPlant }, meta: {} };
     },
     async find(ctx) {
         const userId = ctx.response.get("authenticateduserid");
