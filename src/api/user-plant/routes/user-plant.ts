@@ -12,6 +12,9 @@ export default factories.createCoreRouter("api::user-plant.user-plant", {
     find: {
       middlewares: ["global::jwt-cognito"],
     },
+    update: {
+      middlewares: ["global::jwt-cognito"],
+    },
   },
-  only: ["create", "find"],
+  only: ["create", "find", "update"],
 });

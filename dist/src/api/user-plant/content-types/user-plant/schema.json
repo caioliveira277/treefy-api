@@ -38,8 +38,7 @@
                 "hours",
                 "days",
                 "weeks",
-                "months",
-                "years"
+                "months"
             ]
         },
         "sunTimes": {
@@ -52,8 +51,7 @@
                 "hours",
                 "days",
                 "weeks",
-                "months",
-                "years"
+                "months"
             ]
         }
     }

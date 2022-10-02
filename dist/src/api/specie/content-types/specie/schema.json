@@ -28,12 +28,10 @@
         "waterRange": {
             "type": "enumeration",
             "enum": [
-                "minutes",
                 "hours",
                 "days",
                 "weeks",
-                "months",
-                "years"
+                "months"
             ]
         },
         "sunTimes": {
@@ -43,12 +41,10 @@
         "sunRange": {
             "type": "enumeration",
             "enum": [
-                "minutes",
                 "hours",
                 "days",
                 "weeks",
-                "months",
-                "years"
+                "months"
             ]
         }
     }
