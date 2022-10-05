@@ -23,12 +23,23 @@ export default factories.createCoreController(
       const userPlant = await strapi.db
         .query("api::user-plant.user-plant")
         .update({
+          populate: {
+            species: {
+              fields: ["id", "name"],
+            },
+          },
           where: {
             id: userPlantId,
             userId: userId,
           },
           data: ctx.request.body.data,
         });
+
+      userPlant.species = {
+        data: userPlant.species
+          ? { id: userPlant.species.id, attributes: userPlant.species }
+          : null,
+      };
 
       return { data: { id: userPlantId, attributes: userPlant }, meta: {} };
     },
