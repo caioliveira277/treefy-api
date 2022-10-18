@@ -53,6 +53,12 @@
         "weeks",
         "months"
       ]
+    },
+    "lastSunExposure": {
+      "type": "datetime"
+    },
+    "lastWatering": {
+      "type": "datetime"
     }
   }
 }

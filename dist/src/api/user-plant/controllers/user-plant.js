@@ -21,7 +21,11 @@ exports.default = strapi_1.factories.createCoreController("api::user-plant.user-
             .update({
             populate: {
                 species: {
-                    fields: ["id", "name"],
+                    populate: {
+                        image: {
+                            select: ["url", "id"],
+                        },
+                    },
                 },
             },
             where: {
@@ -32,7 +36,20 @@ exports.default = strapi_1.factories.createCoreController("api::user-plant.user-
         });
         userPlant.species = {
             data: userPlant.species
-                ? { id: userPlant.species.id, attributes: userPlant.species }
+                ? {
+                    id: userPlant.species.id,
+                    attributes: {
+                        ...userPlant.species,
+                        image: {
+                            data: userPlant.species.image.id
+                                ? {
+                                    id: userPlant.species.image.id,
+                                    attributes: { url: userPlant.species.image.url },
+                                }
+                                : null,
+                        },
+                    },
+                }
                 : null,
         };
         return { data: { id: userPlantId, attributes: userPlant }, meta: {} };

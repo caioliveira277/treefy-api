@@ -18,7 +18,8 @@
             "unique": true
         },
         "description": {
-            "type": "text"
+            "type": "text",
+            "required": true
         },
         "waterTimes": {
             "type": "integer",
@@ -45,6 +46,14 @@
                 "days",
                 "weeks",
                 "months"
+            ]
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
             ]
         }
     }

@@ -25,7 +25,11 @@ export default factories.createCoreController(
         .update({
           populate: {
             species: {
-              fields: ["id", "name"],
+              populate: {
+                image: {
+                  select: ["url", "id"],
+                },
+              },
             },
           },
           where: {
@@ -37,7 +41,20 @@ export default factories.createCoreController(
 
       userPlant.species = {
         data: userPlant.species
-          ? { id: userPlant.species.id, attributes: userPlant.species }
+          ? {
+              id: userPlant.species.id,
+              attributes: {
+                ...userPlant.species,
+                image: {
+                  data: userPlant.species.image.id
+                    ? {
+                        id: userPlant.species.image.id,
+                        attributes: { url: userPlant.species.image.url },
+                      }
+                    : null,
+                },
+              },
+            }
           : null,
       };
 
